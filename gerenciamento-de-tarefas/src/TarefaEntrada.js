@@ -28,14 +28,14 @@ function TarefaEntrada({ onAdicionarTarefa }) {
                 placeholder="Digite a descrição de uma nova tarefa"
                 value={descricao}
                 onChange={handleInputChange}
-              /> <br></br>
+              /><br></br>
             </Col>
             <Col sm="20" className="d-flex align-items-center justify-content-center">
               <Button type="submit" className="w-100">Adicionar</Button>
             </Col>
           </Row>
         </Col>
-      </Form.Group>
+      </Form.Group><br></br>
     </Form>
   );
 }
