@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import { Container, Row, Col } from 'react-bootstrap'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import TarefaEntrada from './TarefaEntrada';
 
 function App() {
+  const handleAdicionarTarefa = (descricao) => {
+    console.log("Tarefa adicionada:", descricao); 
+  };
+
   return (
     <Container>
-      <Row>
-        <Col>
-          <h1>Hello, tarefas</h1>
-        </Col>
-      </Row>
+      <TarefaEntrada onAdicionarTarefa={handleAdicionarTarefa} />
     </Container>
   );
 }
