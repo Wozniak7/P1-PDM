@@ -12,25 +12,28 @@ function TarefaEntrada({ onAdicionarTarefa }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!descricao.trim()) return; // Evita adicionar tarefas vazias
+    if (!descricao.trim()) return; 
     onAdicionarTarefa(descricao);
-    setDescricao(''); // Limpa o campo de entrada após adicionar a tarefa
+    setDescricao(''); 
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}><br></br>
       <Form.Group as={Row} controlId="formDescricaoTarefa">
-        <Form.Label column sm="2">Descrição da Tarefa:</Form.Label>
-        <Col sm="8">
-          <Form.Control
-            type="text"
-            placeholder="Digite a descrição da tarefa"
-            value={descricao}
-            onChange={handleInputChange}
-          />
-        </Col>
-        <Col sm="2">
-          <Button type="submit">Adicionar</Button>
+        <Col sm="20">
+          <Row>
+            <Col sm="20">
+              <Form.Control
+                type="text" className="text-center"
+                placeholder="Digite a descrição de uma nova tarefa"
+                value={descricao}
+                onChange={handleInputChange}
+              /> <br></br>
+            </Col>
+            <Col sm="20" className="d-flex align-items-center justify-content-center">
+              <Button type="submit" className="w-100">Adicionar</Button>
+            </Col>
+          </Row>
         </Col>
       </Form.Group>
     </Form>
@@ -39,7 +42,7 @@ function TarefaEntrada({ onAdicionarTarefa }) {
 
 function App() {
   const handleAdicionarTarefa = (descricao) => {
-    console.log("Tarefa adicionada:", descricao); // Aqui você pode implementar a lógica para adicionar a tarefa ao estado do seu aplicativo
+    console.log("Tarefa adicionada:", descricao); 
   };
 
   return (

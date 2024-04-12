@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import TarefaEntrada from './TarefaEntrada';
+import TarefaLista from './TarefaLista';
 
 function App() {
   const handleAdicionarTarefa = (descricao) => {
@@ -11,10 +12,13 @@ function App() {
 
   return (
     <Container>
-      <TarefaEntrada onAdicionarTarefa={handleAdicionarTarefa} />
+      <TarefaEntrada onAdicionarTarefa={handleAdicionarTarefa} /><br></br>
+      <TarefaLista />
     </Container>
   );
+
 }
+
 
 ReactDOM.render(
   <React.StrictMode>
